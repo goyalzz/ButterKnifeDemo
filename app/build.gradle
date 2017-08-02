@@ -13,6 +13,23 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro',
+                    'proguard-butterknife.pro',
+                    'proguard-google-play-services.pro',
+                    'proguard-gson.pro',
+                    'proguard-okhttp.pro',
+                    'proguard-picasso.pro',
+                    'proguard-retrofit.pro',
+                    'proguard-parceler.pro',
+                    'proguard-retrolambda.pro',
+                    'proguard-dagger2.pro',
+                    'proguard-firebase.pro'
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
